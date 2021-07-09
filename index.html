@@ -12,8 +12,18 @@
 </head>
 
 <body>
-  <div id="shop-items" class="row"></div>
-  <div id="cart"></div>
+  <header class="container-flex border-bottom border-secondary sticky-top bg-light">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="pl-3">Hardware Store</h1>
+      <h3>Increase Currency</h3>
+      <h3>Balance Available: <span id="balance-available"></span></h3>
+      <button class="mr-3">Cart</button>
+    </div>
+  </header>
+  <main>
+    <div id="shop-items" class="row"></div>
+    <div id="cart"></div>
+  </main>
   <script src="app/main.js" type="module"></script>
 </body>
 

@@ -43,5 +43,9 @@ export default class PostController {
     PostService.createPost(item)
     _draw()
   }
-
+  deletePost(id) {
+    console.log(id)
+    PostService.deletePost(id)
+    _draw()
+  }
 }

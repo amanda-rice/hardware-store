@@ -13,7 +13,7 @@ export default class Post {
       <h1>${this.name}</h1>
       <p>${this.price}</p>
       <p>${this.quantity}</p>
-      <button onclick="" id="${this.id}-button">Remove</button>
+      <button onclick="app.postController.deletePost('${this.id}')" id="${this.id}-button">Remove</button>
     </div>
     `
     return template
