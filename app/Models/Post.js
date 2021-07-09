@@ -3,17 +3,24 @@ export default class Post {
     this.name = obj.name
     this.price = obj.price.toFixed(2)
     this.quantity = 1
+    this.img = obj.img
     this.id = generateID()
   }
   //can treat template as if it's a property of Post
   get Template() {
     let template = ''
     template += `
-    <div class="col-3 shadow-sm p-3 my-5 bg-body rounded">
-      <h1>${this.name}</h1>
-      <p>$${this.price}</p>
-      <p>${this.quantity}</p>
-      <button onclick="app.postController.deletePost('${this.id}')" id="${this.id}-button">Remove</button>
+    <div class="col-12 shadow-sm bg-body rounded p-3">
+      <div class="row d-flex justify-content-between">
+        <img src="${this.img}" alt="${this.name}" class="col-2 w-100">
+        <h3 class="col-2">${this.name}</h3>
+        <p class="col-2">$${this.price}</p>
+        <p class="col-2">${this.quantity}</p>
+        <p class="col-2">${this.quantity * this.price}</p>
+        <div class="col-1">
+          <button onclick="app.postController.deletePost('${this.id}')" id="${this.id}-button">Remove</button>
+        </div>
+      </div>
     </div>
     `
     return template
