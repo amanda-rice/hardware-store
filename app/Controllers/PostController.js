@@ -15,7 +15,7 @@ function _drawShop() {
     <div class="col-3 shadow-sm p-3 my-5 bg-body rounded">
       <h1>${item.name}</h1>
       <img class="shop-img w-100" src="${item.img}" alt="${item.name}">
-      <p>${item.price}</p>
+      <p>$${item.price.toFixed(2)}</p>
       <button onclick="app.postController.createPost('${key}')">Add to Cart</button>
     </div>
     `
